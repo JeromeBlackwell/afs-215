@@ -10,7 +10,7 @@ class List:
     return myStr
 list = List()
 list.append(3)
-list.append('3')
+list.append('1999')
 myCar = {
   "brand": "Chris Craft",
   "model": "Commander 42",
