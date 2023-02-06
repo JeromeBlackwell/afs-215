@@ -7,7 +7,7 @@ def PepsiCoke(num):
         print("Pepsi")
     elif num % 5 == 0:
         print("Coke")
-          
+
 PepsiCoke(1)
 PepsiCoke(2)
 PepsiCoke(3)
