@@ -1,22 +1,18 @@
-i = 1
-if i < 2:
-  print(i)
-  i += 1
-while i < 3:
-    print(i)
-    i += 1
-while i < 5:
-    print("Pepsi")
-    i += 1
-while i < 6:
-    print("Coke")
-    i += 1
-while i < 10:
-    print("Pepsi")
-    i += 1
-while i < 15:
-    print("Coke")
-    i += 1
-while i < 16:
-    print("PepsiCoke")
-    i += 1   
+def PepsiCoke(num):
+    if num < 3:
+        print(str(num))
+    elif num % 3 == 0 and num % 5 == 0:
+        print("PepsiCoke")
+    elif num % 3 == 0:
+        print("Pepsi")
+    elif num % 5 == 0:
+        print("Coke")
+          
+PepsiCoke(1)
+PepsiCoke(2)
+PepsiCoke(3)
+PepsiCoke(5)
+PepsiCoke(6)
+PepsiCoke(10)
+PepsiCoke(15)
+
