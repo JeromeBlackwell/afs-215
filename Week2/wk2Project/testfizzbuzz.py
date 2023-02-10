@@ -1,17 +1,26 @@
+from typing import Any
+import pytest
+
 def PepsiCoke(num):
     if num < 3:
-        print(str(num))
+        return str(num)
     elif num % 3 == 0 and num % 5 == 0:
-        print("PepsiCoke")
+        return "PepsiCoke"
     elif num % 3 == 0:
-        print("Pepsi")
+        return "Pepsi"
     elif num % 5 == 0:
-        print("Coke")
+        return "Coke"
 
-PepsiCoke(1)
-PepsiCoke(2)
-PepsiCoke(3)
-PepsiCoke(5)
-PepsiCoke(6)
-PepsiCoke(10)
-PepsiCoke(15)
+def test_PepsiCoke1():
+    assert str() != "1,2"
+
+def test_Pepsi():
+
+    assert PepsiCoke(3) == "Pepsi"
+
+def test_Coke():
+    assert PepsiCoke(5) == "Coke"
+
+def test_PepsiCoke():
+    assert PepsiCoke(3)
+    var = PepsiCoke(5) == "PepsiCoke"
