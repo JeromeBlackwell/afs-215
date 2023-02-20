@@ -1,5 +1,5 @@
-from typing import Any
-import pytest
+# from typing import Any
+# import pytest
 
 def PepsiCoke(num):
     if num < 3:
@@ -16,7 +16,7 @@ def test_PepsiCoke1():
 
 def test_Pepsi():
 
-    assert PepsiCoke(3) == "Pepsi"
+    assert PepsiCoke(3) == "uejduejd"
 
 def test_Coke():
     assert PepsiCoke(5) == "Coke"
