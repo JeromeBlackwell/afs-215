@@ -18,5 +18,4 @@ module.exports = class Instances {
     } catch (err){
         logError(err)
     }        
-}   
-
+}
