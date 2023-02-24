@@ -1,3 +1,11 @@
 var Instances = require('./callinstances')
-var ans1 = new Instances
-console.log(ans1.num)
+var ans1 = new Instances(3)
+var ans2 = new Instances(7)
+var ans3 = new Instances(21)
+var ans4 = new Instances(10)
+var ans5 = new Instances("stringD")
+console.log(ans1.Greeting())
+console.log(ans2.Greeting())
+console.log(ans3.Greeting())
+console.log(ans4.Greeting())
+console.log(ans5.Greeting())
