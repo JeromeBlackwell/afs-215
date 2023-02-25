@@ -7,7 +7,7 @@ module.exports = class User {
     }
 
     userInfo = () => {return `Hi ${this.name}. You are ${this.
-        age} year old.` }
+        age} years old.` }
     userInfo() {
         return this.name
     }
@@ -26,6 +26,10 @@ module.exports = class User {
 
     div() {
         return this.num1 / this.num2
+    }
+
+    Call() {
+        return this.num1 ** this.num2
     }
 }
    
