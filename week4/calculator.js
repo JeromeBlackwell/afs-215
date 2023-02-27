@@ -5,21 +5,25 @@ module.exports = class Instances {
     Greeting(){
          
          
-        if (isNaN(this.num)) {
-             return ("Error")
-         }
-         else if (this.num % 3 != 0 || this.num % 7 != 0) {
-            return (this.num.toString());
+         if (isNaN(this.num)) {
+               return ("Error")
          }
          else if (this.num % 3 == 0 && this.num % 7 == 0) {
             return ("Good Evening");
          }
+         else if (this.num > 7) {
+            return ("Good Afternoon");
+         }
+         
          else if (this.num > 3 || this.num % 3 == 0) {
             return ("Good Morning");
          }
          else if (this.num > 7 || this.num % 7 == 0) {
             return ("Good Afternoon");
          }
+         else if (this.num % 3 != 0 || this.num % 7 != 0) {
+            return (this.num.toString());
+         }       
          else if (this.num > 1) {
             return ("1");
          }
@@ -27,11 +31,10 @@ module.exports = class Instances {
             return ("2");
          }
          else if (this.num > 3) {
-            return ("Good Morning")
+            return ("Good Morning");
          }
-         else if (this.num > 7) {
-            return ("Good Afternoon");
-         }
-                 
+         
+        
+          
     }          
  }
