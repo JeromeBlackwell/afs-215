@@ -6,6 +6,3 @@ describe('My Calculator', () => {
        
     })
 })
-// it('expect passing', function(){
-//     expect(true).to.equal() // expected true to equal false   
-// }))
