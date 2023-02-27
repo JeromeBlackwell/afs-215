@@ -1,4 +1,4 @@
-var Instances = require('./calculator.js')
+var Instances = require('./conditional.js')
 var ans1 = new Instances(2)
 var ans2 = new Instances(3)
 var ans3 = new Instances(4)
