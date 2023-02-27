@@ -1,4 +1,4 @@
-var Calculator = require('./calculator.js')
+var Calculator = require('./')
 
 var user1 = new Calculator(4,11)
 
