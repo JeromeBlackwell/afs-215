@@ -1,0 +1,12 @@
+{
+  "name": "capstone215",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testtodo.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

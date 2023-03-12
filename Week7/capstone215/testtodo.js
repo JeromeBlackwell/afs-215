@@ -1,7 +1,7 @@
 const {expect} = require('chai');
-var Exotics = require('./Cars')
-describe('My Exotic Car Test', () => {
-    //#1 call an array
+var Exotics = require('../capstone215/todo')
+describe('My Today List', () => {
+    //#1 call an Dictiionary
     //# original code
     // it('Call Automobiles', () => {
     //     expect(Instance.testFunction()).to.not.equal("Porsche Cayene Turbo") // expected true to equal false
@@ -9,8 +9,8 @@ describe('My Exotic Car Test', () => {
     // })
 
     //# refactored code
-    it('Call Automobiles', () => {
-        expect(Instance.testFunction()).to.equal("Porsche Cayene Turbo") // expected true to equal false
+    it('Call My To Do List', () => {
+        expect(Instance.testFunction()).to.equal("Pack Passport") // expected true to equal false
         
     })
 
@@ -22,9 +22,13 @@ describe('My Exotic Car Test', () => {
     // })
 
     //# refactored Code
-    it('AddCar', () => {
-        expect(Instance.addCar('Rolls Royce Phantom')).to.deep.equal(['Rolls Royce Phantom']) // expected true to equal false
-        
+    it('AddTo List', () => {
+        expect(Instance.addTo('Pack Plane Ticket'))
+             
+    })
+    it('Multi ToDo List', () => {
+        expect(Instance.addMultTodo('Contact Hotel','Pickup Tuxedo',['Schedule pick-up at 4:45am'],['$500']))
+             
     })
 
     //#3 remove an array
@@ -34,8 +38,16 @@ describe('My Exotic Car Test', () => {
         
     // })
     //# refactored code
-    it('RemoveCar', () => {
-        expect(Instance.removeCar('Rolls Royce Phantom')) // expected true to equal false
+    it('RemoveFirtItem', () => {
+        expect(Instance.removeFirstItem()) // expected true to equal false
+
+    })
+    it('RemoveLastItem', () => {
+        expect(Instance.removeLastItem()) // expected true to equal false
+
+    })
+    it('RemoveSpecItem', () => {
+        expect(Instance.removeSpecItem('Pickup Tuxedo')) // expected true to equal false
 
     })
 
@@ -46,15 +58,15 @@ describe('My Exotic Car Test', () => {
         
     // })
     //# refactored code
-    it ('searchCar', () => {
-        let exotics = ["Rolls Royce Phantom", "Porchse Cayene Turbo"] 
-    if (exotics.indexOf("Rolls Royce Phantom") >=0) {
-        console.log("True");
-    } else {
-        console.log("False");
-    }
+    // it ('searchCar', () => {
+    //     let exotics = ["Rolls Royce Phantom", "Porchse Cayene Turbo"] 
+    // if (exotics.indexOf("Rolls Royce Phantom") >=0) {
+    //     console.log("True");
+    // } else {
+    //     console.log("False");
+    // }
     
-      })
+    //   })
 
     //#5 refactor code to implement beforeEach to your code DRY. Atleast one before, after and afterEach
     beforeEach(function(){
@@ -63,7 +75,7 @@ describe('My Exotic Car Test', () => {
     afterEach(function(){
         console.log('*****Test Complete*****')
     })
-    before(function(){
+    beforeEach(function(){
         console.log('*****Test Start*****')
     })
     after(function(){
