@@ -1,10 +1,10 @@
 const {expect} = require('chai');
 var Exotics = require('../capstone215/todo')
 describe('My Today List', () => {
-    //#1 call an Dictiionary
+    //#1 call the todo list
     //# original code
-    // it('Call Automobiles', () => {
-    //     expect(Instance.testFunction()).to.not.equal("Porsche Cayene Turbo") // expected true to equal false
+    // it('Call My To Do List', () => {
+    //     expect(Instance.testFunction()).to.not.equal("Pack Passport") // expected true to equal false
 
     // })
 
@@ -13,62 +13,37 @@ describe('My Today List', () => {
         expect(Instance.testFunction()).to.equal("Pack Passport") // expected true to equal false
         
     })
-
-    //#2 add an array
-    //# original code
-    // it('AddCar', () => {
-    //     expect(Instance.addCar('Rolls Royce Phantom')).to.deep.equal('Rolls Royce Phantom') // expected true to equal false
-        
-    // })
-
-    //# refactored Code
+    //#2 add item
     it('AddTo List', () => {
-        expect(Instance.addTo('Pack Plane Ticket'))
+        expect(Instance.addTo('Pack Plane Ticket')).to.deep.equal(['Pack Plane Ticket']) // expected true to equal false    
+    })
+    //# add number
+    it('AddTo List', () => {
+        expect(Instance.addTo(6)).to.deep.equal([6])
              
     })
+    //#3
+    // Add Multi Items
     it('Multi ToDo List', () => {
-        expect(Instance.addMultTodo('Contact Hotel','Pickup Tuxedo',['Schedule pick-up at 4:45am'],['$500']))
+        expect(Instance.addMultTodo('Contact Hotel',25,['Schedule pick-up at 4:45am'],{A:1, B:2}, true)).to.deep.equal(['Contact Hotel',25,['Schedule pick-up at 4:45am'],{A:1, B:2},true]) // expected true to equal false
              
     })
-
-    //#3 remove an array
-    //# original code
-    // it('RemoveCar', () => {
-    //     expect(Instance.removedCar('Rolls Royce Phantom')) // expected true to equal false
-        
-    // })
-    //# refactored code
-    it('RemoveFirtItem', () => {
+    //#4 remove first item
+    it('RemoveFirstItem', () => {
         expect(Instance.removeFirstItem()) // expected true to equal false
 
     })
+    //#5 remove last item
     it('RemoveLastItem', () => {
         expect(Instance.removeLastItem()) // expected true to equal false
 
     })
+    //#6 remove specific item
     it('RemoveSpecItem', () => {
         expect(Instance.removeSpecItem('Pickup Tuxedo')) // expected true to equal false
 
-    })
-
-    //#4 search an array
-    //# original code
-    // it('SearchCar', () => {
-    //     expect(Instance.searchCar('Porsche Cayene Turbo'))// expected true to equal false
-        
-    // })
-    //# refactored code
-    // it ('searchCar', () => {
-    //     let exotics = ["Rolls Royce Phantom", "Porchse Cayene Turbo"] 
-    // if (exotics.indexOf("Rolls Royce Phantom") >=0) {
-    //     console.log("True");
-    // } else {
-    //     console.log("False");
-    // }
-    
-    //   })
-
-    //#5 refactor code to implement beforeEach to your code DRY. Atleast one before, after and afterEach
+    })    
+    //# refactor code, implement beforeEach, before, after and afterEach
     beforeEach(function(){
         Instance = new Exotics()
     })
